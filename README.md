@@ -40,5 +40,19 @@
       - **[참조]** [messages_en.properties](src/main/resources/messages_en.properties)
       - **[참조]** [messages_fr.properties](src/main/resources/messages_fr.properties)
   - **[참조]** [HelloWorldController.class](src/main/java/me/study/restful/helloword/HelloWorldController.java)
-  
+------------
+- **[RESTful Service 기능 확장] XML format**
+  - RequestHeader Accept : application/xml
+  - **[중요]** 구현
+    - jackson-dataformat-xml dependency 추가
+      - **[참조]** [pom.xml](pom.xml)
+------------
+- **[RESTful Service 기능 확장] Response 제어를 위한 Filtering**
+  - Response 민감정보 제외
+  - **[중요]** 구현 종류
+    - @JsonIgnore, @JsonIgnoreProperties(value = {})
+      - **[참조]** [User.class](src/main/java/me/study/restful/user/User.java)
+    - @JsonFilter
+      - **[참조]** [User.class](src/main/java/me/study/restful/user/User.java)
+      - **[참조]** [AdminUserController.class](src/main/java/me/study/restful/user/AdminUserController.java)
       
