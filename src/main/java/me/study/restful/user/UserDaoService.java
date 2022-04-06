@@ -27,7 +27,6 @@ public class UserDaoService {
         if(user.getId() == null){
             user.setId(++userCount);
         }
-        user.setJoinDate(new Date());
         users.add(user);
         return user;
     }
@@ -52,6 +51,17 @@ public class UserDaoService {
             }
         }
 
+        return null;
+    }
+
+    public User updateById(int id, User updateUser) {
+        for (User user : users) {
+            if(user.getId() == id){
+                user.setName(updateUser.getName());
+                user.setJoinDate(updateUser.getJoinDate());
+                return user;
+            }
+        }
         return null;
     }
 }

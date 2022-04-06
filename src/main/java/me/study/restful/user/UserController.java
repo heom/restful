@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -29,7 +30,11 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user){
+    public ResponseEntity<User> createUser(
+                                            /**
+                                             * @Description [RESTful Service 기능 확장] Validation
+                                             **/
+                                            @Valid @RequestBody User user){
         User saveUser = userDaoService.save(user);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -46,5 +51,23 @@ public class UserController {
         if(user == null){
             throw new UserNotFoundException(id);
         }
+    }
+
+    @PutMapping("/users/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable int id
+                                           /**
+                                            * @Description [RESTful Service 기능 확장] Validation
+                                            **/
+                                            ,@Valid @RequestBody User user){
+        User updateUser = userDaoService.updateById(id, user);
+        if(updateUser == null){
+            throw new UserNotFoundException(id);
+        }
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("")
+                .buildAndExpand(updateUser.getId())
+                .toUri();
+
+        return ResponseEntity.created(location).build();
     }
 }
