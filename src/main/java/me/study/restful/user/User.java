@@ -1,9 +1,9 @@
 package me.study.restful.user;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -13,6 +13,7 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 /**
  * @Description [RESTful Service 기능 확장] Response 제어를 위한 Filtering
  * @JsonIgnore, @JsonIgnoreProperties(value = {})

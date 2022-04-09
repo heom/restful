@@ -55,4 +55,11 @@
     - @JsonFilter
       - **[참조]** [User.class](src/main/java/me/study/restful/user/User.java)
       - **[참조]** [AdminUserController.class](src/main/java/me/study/restful/user/AdminUserController.java)
-      
+------------
+- **[RESTful Service 기능 확장] API Version 관리**
+  - **[중요]** 구현 종류
+    - URI 활용한 REST API Version 관리
+      - **[참조]** [UserV2.class](src/main/java/me/study/restful/user/UserV2.java)
+      - **[참조]** [AdminUserController.class](src/main/java/me/study/restful/user/AdminUserController.java)
+    - Request Parameter/Header 활용한 REST API Version 관리
+      - **[참조]** [AdminUserController.class](src/main/java/me/study/restful/user/AdminUserController.java)
