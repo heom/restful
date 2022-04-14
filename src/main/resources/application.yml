@@ -9,3 +9,7 @@ server:
 spring:
   messages:
     basename: messages
+  #[Spring Boot API 사용] Swagger
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

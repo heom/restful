@@ -68,4 +68,13 @@
   - **[중요]** 구현
     - spring-boot-starter-hateoas dependency 추가
       - **[참조]** [pom.xml](pom.xml)
-      - **[참조]** [UserController.class](src/main/java/me/study/restful/user/UserController.java)
+    - **[참조]** [UserController.class](src/main/java/me/study/restful/user/UserController.java)
+------------
+- **[Spring Boot API 사용] Swagger**
+  - **[중요]** 구현
+    - springfox-swagger-ui / springfox-boot-starter 추가
+      - **[참조]** [pom.xml](pom.xml)
+    - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
+    - **[중요]** Yml 설정 - Spring boot 2.6 이상
+      - mvc.pathmatch.matching-strategy: ant_path_matcher
+      - **[참조]** [application.yml](src/main/resources/application.yml)

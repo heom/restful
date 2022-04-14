@@ -1,6 +1,7 @@
 package me.study.restful.user;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,10 @@ import java.util.Date;
  * @JsonFilter
  **/
 //@JsonFilter("UserInfo")
+/**
+ * @Description Spring Boot API 사용] Swagger
+ **/
+@ApiModel(description = "사용자 상세 정보를 위한 도메인 객체")
 public class User {
     private Integer id;
 
@@ -32,9 +37,11 @@ public class User {
      **/
     @NotEmpty(message = "비어 있을 수 없습니다")
     @Size(min=2, message = "2글자 이상 입력해 주세요.")
+    @ApiModelProperty(notes = "사용자 이름을 입력해주세요.")
     private String name;
     @NotNull
     @Past(message = "미래는 입력할 수 없습니다.")
+    @ApiModelProperty(notes = "사용자 등록일을 입력해주세요.")
     private Date joinDate;
 
     /**
@@ -42,7 +49,9 @@ public class User {
      * @JsonIgnore, @JsonIgnoreProperties(value = {})
      **/
 //    @JsonIgnore
+    @ApiModelProperty(notes = "사용자 등록일를 입력해주세요.")
     private String password;
 //    @JsonIgnore
+    @ApiModelProperty(notes = "사용자 주민번호를 입력해주세요.")
     private String ssn;
 }
