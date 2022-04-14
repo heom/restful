@@ -23,7 +23,7 @@ import java.util.Date;
  * @Description [RESTful Service 기능 확장] Response 제어를 위한 Filtering
  * @JsonFilter
  **/
-@JsonFilter("UserInfo")
+//@JsonFilter("UserInfo")
 public class User {
     private Integer id;
 

@@ -63,3 +63,9 @@
       - **[참조]** [AdminUserController.class](src/main/java/me/study/restful/user/AdminUserController.java)
     - Request Parameter/Header 활용한 REST API Version 관리
       - **[참조]** [AdminUserController.class](src/main/java/me/study/restful/user/AdminUserController.java)
+------------
+- **[Spring Boot API 사용] HATEOAS**
+  - **[중요]** 구현
+    - spring-boot-starter-hateoas dependency 추가
+      - **[참조]** [pom.xml](pom.xml)
+      - **[참조]** [UserController.class](src/main/java/me/study/restful/user/UserController.java)

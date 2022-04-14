@@ -58,6 +58,12 @@
 			<artifactId>jackson-dataformat-xml</artifactId>
 			<version>2.10.2</version>
 		</dependency>
+
+		<!-- [Spring Boot API 사용] HATEOAS -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
