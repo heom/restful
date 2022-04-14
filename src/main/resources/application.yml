@@ -13,3 +13,9 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  #[Spring Boot API 사용] Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

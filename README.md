@@ -72,9 +72,21 @@
 ------------
 - **[Spring Boot API 사용] Swagger**
   - **[중요]** 구현
-    - springfox-swagger-ui / springfox-boot-starter 추가
+    - springfox-swagger-ui / springfox-boot-starter dependency 추가
       - **[참조]** [pom.xml](pom.xml)
-    - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
     - **[중요]** Yml 설정 - Spring boot 2.6 이상
       - mvc.pathmatch.matching-strategy: ant_path_matcher
       - **[참조]** [application.yml](src/main/resources/application.yml)
+    - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
+    - **[참조]** [User.class](src/main/java/me/study/restful/user/User.java)
+------------
+- **[Spring Boot API 사용] Actuator**
+  - REST API Monitoring
+  - **[중요]** 구현
+    - spring-boot-starter-actuator dependency 추가
+      - **[참조]** [pom.xml](pom.xml)
+    - **[중요]** Yml 설정 - 더 많은 기능 추가
+      - management.endpoints.web.exposure.include: "*"
+      - **[참조]** [application.yml](src/main/resources/application.yml)
+    - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
+  - localhost:8080/actuator
