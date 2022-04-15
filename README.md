@@ -79,6 +79,7 @@
       - **[참조]** [application.yml](src/main/resources/application.yml)
     - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
     - **[참조]** [User.class](src/main/java/me/study/restful/user/User.java)
+  - http://localhost:8080/swagger-ui/index.html
 ------------
 - **[Spring Boot API 사용] Actuator**
   - REST API Monitoring
@@ -90,3 +91,9 @@
       - **[참조]** [application.yml](src/main/resources/application.yml)
     - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
   - localhost:8080/actuator
+------------
+- **[Spring Boot API 사용] HAL Browser**
+  - Response 내 json/xml 등 상관없이 쉽게 사용할 수 있는 meta정보를 포함
+  - **[중요]** 구현
+    - spring-data-rest-hal-explorer dependency 추가
+      - **[참조]** [pom.xml](pom.xml)
