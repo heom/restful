@@ -15,10 +15,21 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   #[Spring Boot API 사용] Spring Security
-  security:
-    user:
-      name: user
-      password: passOrd
+  #security:
+   # user:
+    #  name: user
+    # password: passOrd
+  datasource:
+    url: jdbc:h2:mem:testdb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    #[Spring Boot JPA] 초기데이터 설정
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
 #[Spring Boot API 사용] Actuator
 management:
   endpoints:

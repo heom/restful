@@ -111,3 +111,11 @@
         - **[참조]** [application.yml](src/main/resources/application.yml)
       - Config 추가 
         - **[참조]** [SecurityConfig.class](src/main/java/me/study/restful/config/SecurityConfig.java) 
+------------
+- **[Spring Boot JPA] 초기데이터 저장**
+  - **[중요]** 구현
+    - **[중요]** Yml 설정
+      - spring.jpa.defer-datasource-initialization: true
+      - **[참조]** [application.yml](src/main/resources/application.yml)
+    - 데이터 추가 - 꼭 .sql 필수
+      - **[참조]** [data.sql](src/main/resources/data.sql)
