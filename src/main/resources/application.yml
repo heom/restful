@@ -5,15 +5,21 @@ server:
 #  level:
 #    org.springframework: DEBUG
 
-#[RESTful Service ?? ??] ??? ??
+
 spring:
+  #[RESTful Service ?? ??] ??? ??
   messages:
     basename: messages
   #[Spring Boot API 사용] Swagger
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-  #[Spring Boot API 사용] Actuator
+  #[Spring Boot API 사용] Spring Security
+  security:
+    user:
+      name: user
+      password: passOrd
+#[Spring Boot API 사용] Actuator
 management:
   endpoints:
     web:

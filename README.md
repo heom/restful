@@ -90,10 +90,24 @@
       - management.endpoints.web.exposure.include: "*"
       - **[참조]** [application.yml](src/main/resources/application.yml)
     - **[참조]** [SwaggerConfig.class](src/main/java/me/study/restful/config/SwaggerConfig.java)
-  - localhost:8080/actuator
+  - http://localhost:8080/actuator
 ------------
 - **[Spring Boot API 사용] HAL Browser**
-  - Response 내 json/xml 등 상관없이 쉽게 사용할 수 있는 meta정보를 포함
+  - Response 내 json/xml 등 상관없이 쉽게 사용할 수 있는 meta 정보를 포함
   - **[중요]** 구현
     - spring-data-rest-hal-explorer dependency 추가
       - **[참조]** [pom.xml](pom.xml)
+  - http://localhost:8080/explorer/index.html
+------------
+- **[Spring Boot API 사용] Spring Security**
+  - **[중요]** 구현
+    - spring-boot-starter-security dependency 추가
+      - **[참조]** [pom.xml](pom.xml)
+    - root 계정 추가 
+      - Yml 설정 
+        - security.user:  
+           name: user  
+           password: passOrd
+        - **[참조]** [application.yml](src/main/resources/application.yml)
+      - Config 추가 
+        - **[참조]** [SecurityConfig.class](src/main/java/me/study/restful/config/SecurityConfig.java) 
